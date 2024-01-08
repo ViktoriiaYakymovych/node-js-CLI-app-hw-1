@@ -4,6 +4,9 @@ const path = require("path");
 //  Розкоментуй і запиши значення
 const contactsPath = path.join(__dirname, "contacts.json");
 
+// fs.readFile(contactsPath);
+// fs.writeFile(contactsPath);
+
 // TODO: задокументувати кожну функцію
 function listContacts() {
   // ...твій код. Повертає масив контактів.
