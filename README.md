@@ -14,7 +14,7 @@
 
 `3.` Додаємо контакт та виводимо в консоль об'єкт новоствореного контакту
 
-*node index.js --action="add" --name Mango --email mango@gmail.com --phone 322-22-22*
+*node index.js --action="add" --name Mango --email \mango@gmail.com --phone 322-22-22*
 
 [подивитися тут](https://ibb.co/vYRcfQq)
 
