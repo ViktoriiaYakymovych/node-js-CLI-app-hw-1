@@ -1,3 +1,54 @@
 const contacts = require("./contacts");
 
-// console.log(contacts.listContacts());
+const { Command } = require("commander");
+const program = new Command();
+
+program
+  .option("-a, --action <type>", "choose action")
+  .option("-i, --id <type>", "user id")
+  .option("-n, --name <type>", "user name")
+  .option("-e, --email <type>", "user email")
+  .option("-p, --phone <type>", "user phone");
+
+program.parse(process.argv);
+
+const argv = program.opts();
+
+async function invokeAction({ action, id, name, email, phone }) {
+  switch (action) {
+    case "list":
+      const listContacts = await contacts.listContacts();
+      console.table(listContacts);
+      break;
+
+    case "get":
+      const contact = await contacts.getContactById(id);
+      console.log(contact);
+      break;
+
+    case "add":
+      const newContact = await contacts.addContact(name, email, phone);
+      console.log(newContact);
+      break;
+
+    case "remove":
+      const contactToDelete = await contacts.removeContact(id);
+      console.log(contactToDelete);
+      break;
+
+    default:
+      console.warn("\x1B[31m Unknown action type!");
+  }
+}
+
+invokeAction(argv);
+
+// invokeAction({action: 'list'});
+// invokeAction({ action: "get", id: "AeHIrLTr6JkxGE6SN-0Rw" });
+// invokeAction({
+//   action: "add",
+//   name: "test",
+//   email: "test@mail.com",
+//   phone: "123456789",
+// });
+// invokeAction({ action: "remove", id: "fnkjUcP11lz-U8GHC3wr-" });
