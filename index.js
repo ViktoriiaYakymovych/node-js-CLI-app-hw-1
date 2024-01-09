@@ -51,4 +51,4 @@ invokeAction(argv);
 //   email: "test@mail.com",
 //   phone: "123456789",
 // });
-// invokeAction({ action: "remove", id: "fnkjUcP11lz-U8GHC3wr-" });
+// invokeAction({ action: "remove", id: "1wAMf7UWQqGkr5J3ASd1-" });
