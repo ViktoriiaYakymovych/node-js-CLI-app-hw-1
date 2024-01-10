@@ -31,4 +31,4 @@ node index.js --action="remove" --id qdggE76Jtbfd9eWJHrssH
 ```
 
 [подивитися тут](https://ibb.co/rGhD1mR)
-![remove](https://ibb.co/rGhD1mR)
+![remove](https://i.ibb.co/JRTDMKw/remove.png)
